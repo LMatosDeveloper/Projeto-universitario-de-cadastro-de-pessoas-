@@ -1,0 +1,54 @@
+body
+{
+	margin : 0;
+	padding : 0;
+	font-family: sans-serif;
+	background: url(estilos/brasao5.png) no-repeat top center,
+	url(estilos/fundocinza.png);
+	background-size: auto;
+	color: #fff;
+	font-size: 20px;
+	overflow-x: auto;
+}
+.divTabela
+{
+	position: relative;
+	margin-top: 200px;
+	left: 5%;
+	transform: translate(-50%, =50%);
+	width: 1700px;
+	background: rgba(0,0,0,.9);
+	box-sizing: border-box;
+	box-shadow: 0 15px 25px rgba(0,0,0,.7);
+	border-radius: 10px;
+}
+.tabela
+{
+	width: 100%;
+	text-align: center;
+	border: none;
+
+}
+.tabela th
+{
+	background-color: #444;
+	padding: 15px;
+}
+.tabela a
+{
+	text-decoration: none;
+	color: #fff;
+	
+
+}
+.tabela a:hover
+{
+	background-color: #004d1a;
+	border-radius: 10%;
+	transition: 0.75s;
+}
+.tabela tr:nth-child(even)
+{
+	background-color: #222;
+}
+

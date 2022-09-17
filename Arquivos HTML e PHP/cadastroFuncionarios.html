@@ -1,0 +1,243 @@
+<html> 
+	<head>
+		<title>Cadastro de Funcionario</title>
+		<link rel="stylesheet" type="text/css" href="estilos/estiloFuncionarios.css">
+	</head>
+	<body>
+		<div class="formulario">
+		<h1>Cadastro de Funcionarios</h1>
+
+		<form 	action="cadFuncionarios.php" 
+				enctype="multipart/form-data"
+				method="post">
+			<fieldset class="fieldset">
+				<legend>Informações Pessoais</legend>
+			<br>Nome completo: 
+			<input  type="text" name="nomeFuncionario"	class="inputBox"
+					maxlength="50" size="30" 
+					placeholder="Informe o seu nome completo">
+			<br>
+		    Data de Nascimento: 
+			<input 	type="date" 	class="inputBox"
+					name="dataNascimento"
+					min="1920-01-01"
+					max="2018-01-01">
+			<br>
+			CPF:
+			<input type="number"	class="inputBox"
+				   name="cpf"
+				   maxlength="14"
+				   size="15"
+				   placeholder="Informe seu CPF">
+			<br>
+			RG:
+			<input type="number"	class="inputBox"
+				   name="rg"
+				   maxlength="9"
+				   size="10"
+				   placeholder="Informe seu RG">
+			<br>
+			Sexo:
+			<select name="sexo">
+			<option value="">Selecione seu sexo</option>
+			<option value="F">Feminino</option>
+			<option value="M">Masculino</option>
+			<option value="T">Transsexual</option>
+			<option value="I">Indefinido</option>
+			</select>
+			<br>
+			
+			Nacionalidade:
+			<input type="name"	class="inputBox"
+				   name="nacionalidade"
+				   size="20"
+				   maxlength="50"
+				   placeholder="Informe a sua nacionalidade">	
+			
+			
+			UF:
+				<select name="estado" required>
+				<option value="">Selecione</option>
+				<option value="AC">Acre</option>
+				<option value="AL">Alagoas</option>
+				<option value="AP">Amapá</option>
+				<option value="AM">Amazonas</option>
+				<option value="BA">Bahia</option>
+				<option value="CE">Ceará</option>
+				<option value="DF">Distrito Federal</option>
+				<option value="ES">Espirito Santo</option>
+				<option value="GO">Goiás</option>
+				<option value="MA">Maranhão</option>
+				<option value="MS">Mato Grosso do Sul</option>
+				<option value="MT">Mato Grosso</option>
+				<option value="MG">Minas Gerais</option>
+				<option value="PA">Pará</option>
+				<option value="PB">Paraíba</option>
+				<option value="PR">Paraná</option>
+				<option value="PE">Pernambuco</option>
+				<option value="PI">Piauí</option>
+				<option value="RJ">Rio de Janeiro</option>
+				<option value="RN">Rio Grande do Norte</option>
+				<option value="RS">Rio Grande do Sul</option>
+				<option value="RO">Rondônia</option>
+				<option value="RR">Roraima</option>
+				<option value="SC">Santa Catarina</option>
+				<option value="SP">São Paulo</option>
+				<option value="SE">Sergipe</option>
+				<option value="TO">Tocantins</option>
+				<option value="EX">Estrangeiro</option>
+				
+		    </select>
+			Estado Civil:
+			<select name="estadoCivil">
+			<option value="">Escolha seu estado civil</option>
+			<option value="S">Solteiro(a)</option>
+			<option value="C">Casado(a)</option>
+			<option value="D">Divorciado(a)</option>
+			<option value="V">Viúvo(a)</option>
+			</select><br>
+			
+			Telefone: <br>
+				DDD:
+				<input 	type="ddd"	class="inputBox"
+						name="dddTel"
+						size="2"
+						maxlength="2"
+						placeholder="DDD"> 
+				Número :
+				<input 	type="number"	class="inputBox"
+						name="telefone"
+						size="15"
+						maxlength="9"
+						placeholder="Informe o seu número"
+						required>
+			<br>
+			E-mail:
+			<input type="email"	class="inputBox"
+				   name="email"
+				   size="30"
+				   maxlength="50"
+				   placeholder="Informe seu email"
+				   required><br>
+				   
+			Nome do pai:
+			<input type="name"	class="inputBox"
+				   name="nomePai"
+				   size="30"
+				   maxlength="50"
+				   required
+				   placeholder="Informe o nome do pai">
+			 Nome da mãe:
+			<input type="name"	class="inputBox"
+				   name="nomeMae"
+				   size="30"
+				   maxlength="50"
+				   required
+				   placeholder="Informe o nome da mãe"><br>
+				   
+				   
+			Endereço:
+			<input type="text"	class="inputBox"
+				   name="endereco"
+				   size="30"
+				   maxlength="100"
+				   placeholder="Informe o seu endereço"
+				   required>
+			Nº:
+			<input type="number"	class="inputBox"
+				   name="numero"
+				   placeholder="Número da residencial"
+				   required>
+			
+			Bairro:
+			<input type="text"	class="inputBox"
+				   name="bairro"
+				   placeholder="Informe o bairro"
+				   maxlength="50"
+				   required>
+			CEP:
+			<input type="number"	class="inputBox"
+			       name="cep"
+				   placeholder="Informe o CEP"
+				   maxlength="10"
+				   required>
+		
+			</fieldset><br>
+			<fieldset class="fieldset">
+				<legend>Informações de Trabalho</legend>
+			<br>Data de Admissão:
+			<input 	type="date"	class="inputBox"
+				name="admissao"
+				min="2000-01-01"
+				max="2019-12-31"
+				required> <br>
+			
+			Cargo de ocupação:
+			<input type="text"	class="inputBox"
+			       name="cargoEmpresa"
+				   size="50"
+				   maxlength="30"
+				   required
+				   placeholder="Informe seu cargo"><br>			
+			Horário de trabalho:
+			<input 	type="time"	class="inputBox"
+				name="cargaHoraria"
+				min="04:00"
+				max="10:00"
+				required><br>  
+			<div class="radio">
+			Diplomata?
+			<label><input type="radio" name="diplomata" value="S" checked><span class="sim">Sim</span></label>
+			<label><input type="radio" name="diplomata" value="N"><span class="nao">Não</span></label>
+			</div>
+			<br>
+			<div class="radio">
+			Estrangeiro?
+			<label><input type="radio" name="estrangeiro" value="S" checked><span class="sim">Sim</span></label>
+			<label><input type="radio" name="estrangeiro" value="N"><span class="nao">Não</span></label>
+			</div>
+			<br><br>
+			Id do País:
+			<input type="text"	class="inputBox"
+			       name="idPais"
+				   size="30"
+				   maxlength="30"
+				   placeholder="Opcional">
+			<br><br>
+			</fieldset>
+			<fieldset class="fieldset">
+				<legend>Informações Bancárias</legend>
+			<br>Nome do banco:
+			<input type="text"	class="inputBox"
+			       name="nomeBanco"
+				   size="20"
+				   maxlength="20"
+				   placeholder="Informe o nome do banco"><br>
+			<div class="radio">
+			Tipo de conta:
+			<label><input type="radio" name="tipoConta" value="CC" checked><span class="sim">Conta Corrente</span></label>
+			<label><input type="radio" name="tipoConta" value="CP"><span class="nao">Conta Poupança</span></label>
+			</div>
+			<br>
+			Agencia:
+				<input 	type="text"	class="inputBox"
+						name="agencia"
+						size="4"
+						maxlength="4"
+						placeholder="Agencia">
+	        Número da conta:
+				<input 	type="text" class="inputBox"
+						name="numeroConta"
+						size="15"
+						maxlength="15"
+						placeholder="Nº Conta">
+			</fieldset>	   
+		
+			<br>
+			<input type="submit" value="Enviar">
+						<p class="p2"><a href="index.html">Home Page</a></p>
+						<p class="p3"><a href="listaFuncionarios.php">Listagem</a></p>
+		</form>
+	</div>
+	</body>
+</html>

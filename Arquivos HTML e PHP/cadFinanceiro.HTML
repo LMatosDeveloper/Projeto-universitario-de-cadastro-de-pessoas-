@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Sistema Financeiro</title>
+		<link rel="stylesheet" type="text/css"  href="estilos/estilosFinanceiro.css">
+	</head>	
+	<body>
+	 	<div class="formulario">
+			<h2>Sistema Financeiro de Pagamento</h2>
+				<form 	action="financeiro.php"
+			  			method="post"
+			  			enctype="multipart/form-data">
+			 
+					<fieldset class="fieldset">
+						<legend>Empregados e Terceirizados</legend>
+					<br>
+					<div class="cartao">
+						<!-- <div class="frente"><img src="estilos/brasil5.png"></div> -->
+						<div class="back">
+						<h3>Informação Importante</h3><br>
+						<p class="p1"> 
+							<ul>
+								<li> Preencha todos os campos corretamente para não ter problemas no ato do pagamento.</li><br>
+									<li> Evite usar caracter especiais.</li><br>
+									<br>
+							</ul>
+						</p><br><br>
+						<h3>Onde voce quer ir?</h3><br><br>
+						<p class="p2"><a href="index.html">Home Page</a></p>
+						<p class="p3"><a href="listagemFinanceiro.php">Listagem</a></p>
+						</div>
+					</div>
+					<div class="radio">
+					<label>Tipo de Pessoa <br>
+						<input type="radio"    name="tipoPessoa"    value="F" checked><span class="sim">Pessoa Física</span></label>
+					<label><input type="radio" name="tipoPessoa"   value="J"><span class="nao">Pessoa Jurídica</span></label><br><br>
+					</div>
+					<br>
+					<div class="inputBox">
+					<label>Nome do Funcionário:</label>	<br> 
+						<input	type="text"		name="nomeColaborador"
+								size="30"		maxlength="50" placeholder="Escreva o nome completo" required>
+					</div>
+					<br><br>
+					<label>Departamento:</label>
+						
+						<select	name="departamento" required>
+							<option  value="">Escolha</option>
+									<option  value="adm">Administrativa</option>
+									<option  value="consul">Consular</option>
+									<option  value="jurid">Jurídico</option>
+									<option  value="financ">Financeiro</option>
+									<option  value="polit">Políticas</option>
+									<option  value="impres">Impressa</option>
+									<option  value="comer">Comercial</option>
+									<option  value="educ">Educação e Cultura</option>
+									<option  value="recep">Recepção</option>
+									<option  value="segur">Segurança</option>
+									<option  value="limp">Limpreza</option></select>
+					<br><br>
+					<div class="inputBox">
+					<label>CPF:</label><br>
+						<input	type="number"	name="cpf" min="0"
+								size="15"		maxlength="13" required="">
+					</div>
+					<br><br>
+					
+					<label>Banco:</label>
+						<select	name="nomeBanco" class="selecao" required>
+							 <option  value="">Escolha</option>
+					     <option  value="SA">033- Santander</option>
+  				         <option  value="BR">237- Bradesco</option>
+					     <option  value="BB">001- Banco do Brasil</option>
+					     <option  value="IT">341- Itaú - Unibanco</option>
+					     <option  value="CF">104- Caixa Econômica Federal</option>
+						 <option  value="OU">Outros</option></select>
+					<br><br>
+					
+					<div class="radio">
+					<label>Tipo da Conta: <br>
+						<input type="radio"    name="tipoConta"    value="CS" checked><span class="sim">Conta Salário</span></label>
+					<label><input type="radio" name="tipoConta"   value="CC"><span class="nao">Conta Corrente</span></label><br><br>
+					</div>
+					<br><br>
+					<div class="inputBox">
+					<label>Nº da Conta:</label><br>
+						<input	type="number"	name="numConta"
+								size="15"		maxlength="13" required="">
+					</div>
+					<br><br>
+					
+					<label>Refente ao mês de:</label>
+						<select	name="referente"  class="selecao" required>
+						 <option  value="">Escolha</option>
+					     <option  value="Jan">Janeiro</option>
+  				         <option  value="Fev">Fevereiro</option>
+					     <option  value="Mar">Março</option>
+					     <option  value="Abr">Abril</option>
+						 <option  value="Mai">Maio</option>
+					     <option  value="Jun">Junho</option>
+  				         <option  value="Jul">Julho</option>
+					     <option  value="Ago">Agosto</option>
+					     <option  value="Set">Setembro</option>
+					     <option  value="Out">Outubro</option>
+					     <option  value="Nov">Novembro</option>
+					     <option  value="Dez">Dezembro</option></select>
+						 
+					<br><br>
+					
+					<div class="radio">
+					<label>Tipo de pagamento: <br>
+					<input type="radio"    name="tipoPag"       value="T" checked><span class="sim">Total</span></label>
+					<label><input type="radio" name="tipoPag"   value="P"><span class="nao">Parcial</span></label><br><br>
+					</div>
+					
+					<br><br>
+					<div class="inputBox">
+					<label>Valor R$</label><br>
+						<input	type="number"	name="valor"  min="50" step="5" required
+								size="15"		maxlength="13" required="">
+					</div>
+					</fieldset>
+					<br><br>
+					<div class="inputBox">
+					<label>Data de Pagamento:</label><br>
+					<input	type="date"		name="dataPagamento">
+					</div>
+					<br><br>
+					<div class="inputBoxText">
+					<label>Observações:</label><br>
+						<textarea	name="obs"		rows="3"
+									cols="80"		placeholder="Digite aqui o seu Texto"></textarea>
+					</div>
+					<br>
+									
+					<input type="submit" value="Finalizar Pagamento">
+					<input type="reset" value="Cancelar">			
+					</fieldset>
+				</form>		
+		</div>
+	
+	</body>
+
+
+</html>

@@ -1,0 +1,350 @@
+body
+{
+	margin : 0;
+	padding : 0;
+	font-family: Parkavenue;
+	background: url(imagens/brasao.png) no-repeat center,
+	url(imagens/fundocinza.png) center;
+	
+	color: #fff;
+	font-size: 20px;
+
+}
+.formulario /* é a estilização da div principal, onde está o formulário TODO.  */
+{
+	position: relative;
+	left: 18%;
+	transform: translate(-50%, =50%);
+	width: 1255px;
+	background: rgba(0,0,0,.9);
+	box-sizing: border-box;
+	box-shadow: 0 15px 25px rgba(0,0,0,.7);
+	border-radius: 10px;
+}
+.fieldset /* usei isso pra tirar toda a borda do fieldset, e deixei só a borda onde tá a legenda. */
+{
+	border: none;
+	outline: none;
+	border-top: 1px groove #ccc;
+}
+legend
+{
+	color: #fff;
+}
+
+.formulario h2
+{
+	margin: 0 0 30px;
+	padding:  0;
+	color: #fff;
+	text-align: center;
+}
+.formulario .inputBox /* estilização das divs dos campos. Vcs podem mudar aqui e fazer um css pro form de vcs, até mesmo pra tirar o float e deixar tudo alinhado. 
+Esse float foi pra fazer meu campo de informações do lado */
+{
+	position: relative;
+	width: 55%;
+	float: left;
+}
+.formulario .inputBoxText /* esse aqui foi pra separar as minhas textarea, assim elas não pegaram o float das outras. */
+{
+	position: relative;
+	width: 50%;
+	
+}
+.cartao /* essa classe cartao é a estilização da minha div de informações */
+{
+	float: right;
+	width: 45%;
+	height: 800px;
+
+	/*transform-style: preserve-3d;
+	perspective: 600px;
+	transition: 0.5s; */
+}
+/*.cartao .frente
+{
+	background: transparent;
+	backface-visibility: hidden;
+	transform: rotateX(0deg);
+	transition: 0.75s;
+}*/
+/*.cartao:hover .frente
+{
+	transform: rotateX(-180deg);
+}*/
+/*.cartao .back
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: transparent;
+	backface-visibility: hidden;
+	transform: rotateX(180deg);
+	transition: 0.75s;
+	
+}
+.cartao:hover .back
+{
+	transform: rotateX(0deg);
+} */
+
+.cartao h3
+{
+	text-align: center;
+
+}
+.p1
+{
+	width: 50%;
+	text-align: center;
+	padding-left: 35px;
+	font-size: 24px;
+
+}
+.p2
+{
+	width: 50%;
+	text-align: center;
+	padding-left: 150px;
+	font-size: 20px;
+}
+.p2 a
+{
+	display: inline-block;
+	width: 96px;
+	height: 96px;
+	text-align: center;
+	background: #262626;
+	color: #fff;
+	text-decoration: none;
+	border-radius: 10%;
+	transition: 0.75s;
+	line-height: 90px;
+	float: left;
+
+}
+
+.p2 a:hover
+{
+	background: #0000EE;
+}
+.p3
+{
+	width: 50%;
+	text-align: center;
+	padding-left: 150px;
+	font-size: 20px;
+}
+.p3 a
+{
+	display: inline-block;
+	width: 96px;
+	height: 96px;
+	text-align: center;
+	background: #262626;
+	color: #fff;
+	text-decoration: none;
+	border-radius: 10%;
+	transition: 0.75s;
+	line-height: 90px;
+	float: right;
+}
+.p3 a:hover
+{
+	background: #0000EE	;
+}
+.cartao ul
+{
+	font-size: 15px;
+	padding-left: 50px;
+	color: #ccc;
+}
+.formulario .inputBox input /* estilização dos inputs (as caixas pra colocar os dados) */
+{
+	width: 100%;
+	padding: 10px, 0;
+	font-size: 16px;
+	color: #fff;
+	margin-bottom: 15px;
+	border: none;
+	outline: none;
+	background: transparent;
+	background-color: #444
+
+}
+.formulario .inputBoxText textarea /* mesma coisa do de cima, só que as textarea */
+{
+	width: 100%;
+	padding: 10px 0;
+	font-size: 20px;
+	color: #fff;
+	border: none;
+	border-bottom: 1px groove #777;
+	outline: none;
+	background: transparent;
+
+}
+.formulario .inputBox label /* essa aqui é pros nomes do campos */
+{
+	position: relative;
+	top: 0;
+	left: 0;
+	padding: 10px 0;
+	font-size: 20px;
+	color: #fff;
+	pointer-events: none;
+	transition: 0.5s;
+}
+
+
+.formulario input[type="submit"] /* botão de enviar */ 
+{
+	background: transparent;
+	border: none;
+	outline: none;
+	color: #fff;
+	background: linear-gradient(90deg, #262626, #737373, #262626);
+	background-size: 400%;
+	padding: 9px 18px;
+	cursor: pointer;
+	border-radius: 30px;
+
+}
+.formulario input[type="submit"]:hover
+{
+	animation: animate 8s linear infinite;
+}
+@keyframes animate
+{
+	0%
+	{
+		background-position: 0%;
+	}
+	100%
+	{
+		background-position: 400%;
+	}
+}
+
+.formulario input[type="reset"] /* botão de resetar */
+{
+	background: transparent;
+	border: none;
+	outline: none;
+	color: #fff;
+	background: linear-gradient(90deg, #262626, #737373, #262626);
+	background-size: 400%;
+	padding: 9px 18px;
+	cursor: pointer;
+	border-radius: 30px;
+	z-index: 1;
+}
+.formulario input[type="reset"]:hover
+{
+	animation: animate 8s linear infinite;
+}
+@keyframes animate
+{
+	0%
+	{
+		background-position: 0%;
+	}
+	100%
+	{
+		background-position: 400%;
+	}
+}
+.formulario select /* CSS da lista de seleção, pra deixar ela com formato diferente e na cor preta */
+{
+	background: #000;
+	color: #fff;
+	padding: 10px;
+	width: 250px;
+	height: 50px;
+	border: none;
+	font-size: 15px;
+	box-shadow: 0 5px 25px rgba(0,0,0,.5);
+	-webkit-appearance: button;
+	outline: none;
+}
+.radio label input /* todos os daqui pra baixo foram para a criação dos radios como botões, e não bolinhas */ 
+{
+	display: none;
+}
+.radio label span
+{
+	position: relative;
+	display: inline-block;
+	cursor: pointer;
+	font-size: 18px;
+	padding: 10px;
+	text-align: center;
+	margin: 20px 10px;
+	width: 100px;
+	background: #000;
+	border: 1px solid #444;
+	border-radius: 4px;
+	color: #444;
+
+}
+.radio label input:checked ~ span
+{
+	color: #fff;
+	border: 1px solid #008eff;
+}
+.radio label input:checked ~ span:before
+{
+	content: '';
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: #008eff;
+	z-index: -1;
+	filter: blur(10px);
+}
+.radio label input:checked ~ span:after
+{
+	content: '';
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: #008eff;
+	z-index: -1;
+	filter: blur(15px);
+}
+.radio label input:checked ~ span.masculino
+{
+	color: #00ffff;
+	border-color: #00ffff;
+	box-shadow: inset 0 0 10px #62ff00;
+}
+.radio label input:checked ~ span.feminino
+{
+	color: #ff00ff;
+	border-color: #ff00ff;
+	box-shadow: inset 0 0 10px #ff00ff;
+}
+
+.divTabela
+{
+	position: absolute;
+	top: 50%;
+	left: 18%;
+	transform: translate(-50%, =50%);
+	width: 1255px;
+	background: rgba(0,0,0,.9);
+	box-sizing: border-box;
+	box-shadow: 0 15px 25px rgba(0,0,0,.7);
+	border-radius: 10px;
+}
+.tabela
+{
+	border: 1px solid white;
+}

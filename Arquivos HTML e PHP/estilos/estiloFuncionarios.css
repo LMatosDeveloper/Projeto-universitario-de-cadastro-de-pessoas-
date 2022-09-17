@@ -1,0 +1,207 @@
+body
+{
+	margin : 0;
+	padding : 0;
+	font-family: Parkavenue;
+	background: url(imagens/brasao.png) no-repeat center,
+	url(imagens/fundocinza.png) center;
+	
+	color: #fff;
+	font-size: 20px;
+	
+}
+h1
+{
+	text-align: center;
+	font-family: Parkavenue;
+}
+
+.formulario 
+{
+	position: relative;
+	left: 18%;
+	transform: translate(-50%, =50%);
+	width: 1255px;
+	background: rgba(0,0,0,.9);
+	box-sizing: border-box;
+	box-shadow: 0 15px 25px rgba(0,0,0,.7);
+	border-radius: 10px;
+	
+}
+.fieldset
+{
+	border: none;
+	outline: none;
+	border-top: 1px groove #ccc;
+	
+}
+legend
+{
+	color: #fff;
+}
+.formulario select 
+{
+	background: #000;
+	color: #fff;
+	padding: 10px;
+	width: 250px;
+	height: 50px;
+	border: none;
+	font-size: 15px;
+	box-shadow: 0 5px 25px rgba(0,0,0,.5);
+	-webkit-appearance: button;
+	outline: none;
+}
+.inputBox
+{
+	padding: 10px, 0;
+	font-size: 16px;
+	color: #fff;
+	margin-bottom: 15px;
+	border: none;
+	outline: none;
+	background: transparent;
+	background-color: #444
+
+}
+.radio label input /* todos os daqui pra baixo foram para a criação dos radios como botões, e não bolinhas */ 
+{
+	display: none;
+}
+.radio label span
+{
+	position: relative;
+	display: inline-block;
+	cursor: pointer;
+	font-size: 18px;
+	padding: 5px;
+	text-align: center;
+	margin: 20px 10px;
+	width: 67px;
+	background: #000;
+	border: 1px solid #444;
+	border-radius: 4px;
+	color: #444;
+
+}
+.radio label input:checked ~ span
+{
+	color: #fff;
+	border: 1px solid #008eff;
+}
+.radio label input:checked ~ span:before
+{
+	content: '';
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: #008eff;
+	z-index: -1;
+	filter: blur(10px);
+}
+.radio label input:checked ~ span:after
+{
+	content: '';
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: #008eff;
+	z-index: -1;
+	filter: blur(15px);
+}
+.radio label input:checked ~ span.nao
+{
+	color: #0073e6;
+	border-color: #0073e6;
+	box-shadow: inset 0 0 10px #0073e6;
+}
+.radio label input:checked ~ span.sim
+{
+	color: #0073e6;
+	border-color: #0073e6;
+	box-shadow: inset 0 0 10px #0073e6;
+}
+.formulario input[type="submit"] /* botão de enviar */ 
+{
+	background: transparent;
+	border: none;
+	outline: none;
+	color: #fff;
+	background: linear-gradient(90deg, #262626, #737373, #262626);
+	background-size: 400%;
+	padding: 9px 18px;
+	cursor: pointer;
+	border-radius: 30px;
+
+}
+.formulario input[type="submit"]:hover
+{
+	animation: animate 8s linear infinite;
+}
+@keyframes animate
+{
+	0%
+	{
+		background-position: 0%;
+	}
+	100%
+	{
+		background-position: 400%;
+	}
+}
+.p2
+{
+	width: 50%;
+	text-align: center;
+	padding-left: 150px;
+	font-size: 20px;
+}
+.p2 a
+{
+	display: inline-block;
+	width: 96px;
+	height: 96px;
+	text-align: center;
+	background: #262626;
+	color: #fff;
+	text-decoration: none;
+	border-radius: 10%;
+	transition: 0.75s;
+	line-height: 90px;
+	float: left;
+
+}
+
+.p2 a:hover
+{
+	background: #004d1a;
+}
+.p3
+{
+	width: 50%;
+	text-align: center;
+	padding-left: 150px;
+	font-size: 20px;
+}
+.p3 a
+{
+	display: inline-block;
+	width: 96px;
+	height: 96px;
+	text-align: center;
+	background: #262626;
+	color: #fff;
+	text-decoration: none;
+	border-radius: 10%;
+	transition: 0.75s;
+	line-height: 90px;
+	float: right;
+}
+.p3 a:hover
+{
+	background: #004d1a;
+}

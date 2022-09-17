@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		
+		<title>Cadastro de Missões</title>
+		<link rel="stylesheet" type="text/css"  href="estilos/estilosEmbaixada.css">
+	</head>	
+
+	<body>
+		 
+	 	<div class="formulario">
+			<h2>Cadastro de Missões</h2>
+				<form 	action="cadMissoes.php"
+			  			method="post"
+			  			enctype="multipart/form-data">
+			 
+					<fieldset class="fieldset">
+						<legend>Informações da Missão</legend>
+					<br>
+					<div class="cartao">
+						<!-- <div class="frente"><img src="estilos/brasil5.png"></div> -->
+						<div class="back">
+						<h3>Informações Úteis</h3><br>
+						<p class="p1"> 
+							<ul>
+								<li> O registro da Missão é alfanumérico e possui no máximo 10 caracteres.</li><br>
+									<br>
+								<li>O campo de risco da missão é de vital importância para garantir a segurança do Diplomata.</li><br>
+									<br>
+								<li>A descrição deve ser detalhada e conter todas as informações da missão.</li><br>
+									<br>
+								<li>Datas e Status devem ser atualizados sempre para evitar sobreposição de missões para os Diplomatas.</li><br>
+									<br>
+							</ul>
+						</p><br><br>
+						<h3>Links:</h3><br><br>
+						<p class="p2"><a href="index.html">Home Page</a></p>
+						<p class="p3"><a href="listaMissoes.php">Listagem</a></p>
+						</div>
+					</div>
+					<div class="inputBox">
+					<label>Registro da Missão:</label>	<br> 
+						<input	type="text"		name="registroMissao"
+								size="10"		maxlength="10" required="">
+					</div>
+					<br>
+					
+					<div class="inputBox">
+					<label>Data de início:</label><br>
+						<input	type="date"		name="dataInicio" required="">
+					</div>
+					<br>
+					<div class="inputBox">
+					<label>Data de finalização:</label><br>
+						<input	type="date"		name="dataFim">
+					</div>
+					<br>
+					<div class="inputBox">
+					<label>Pais de realização:</label><br>
+						<input	type="text"		name="paisDestino"
+								size="30"		maxlength="30" required="">
+					</div>
+					<br>
+					
+					<label>Tipo de missão:</label>
+						
+						<select	name="tipoMissao">
+							<option value="">Escolha...</option>
+							<option value="1">1 - Reunião com Ministros</option>
+							<option value="2">2 - Reunião com Chefe de Estado</option>
+							<option value="3">3 - Crise Diplomática</option>
+							<option value="4">4 - Cidadão acusado de crime</option>
+							<option value="5">5 - Cidadão vitíma de crime</option>
+						</select>
+						
+					<br><br>
+					<div class="inputBox">
+					<label>Código do diplomata responsável:</label><br>
+						<input	type="number"	name="codigoDiplomata"
+								size="11"		maxlength="11" required="">
+					</div>
+					<br>
+					<div class="inputBox">
+					<label>Nome do diplomata responsável:</label><br>
+						<input	type="text"		name="nomeDiplomata"
+								size="30"		maxlength="30" required="">
+					</div>
+					<br>
+					<div class="radio">
+					<label>Há risco na missão?<br>
+						<input type="radio" name="riscos" value="0" checked><span class="nao">Não</span></label>
+					<label><input type="radio" name="riscos" value="1"><span class="sim">Sim</span></label><br><br>
+					</div>
+					<label>Tipo de viagem:</label>
+						<select	name="tipoViagem" class="selecao">
+							<option value="">Escolha...</option>
+							<option value="1">1 - Meios próprios</option>
+							<option value="2">2 - Vôo Comum</option>
+							<option value="3">3 - Primeira Classe</option>
+							<option value="4">4 - Ferrovia</option>
+							<option value="5">5 - Veículo Oficial</option>
+						</select>
+					
+					<br><br>
+					<div class="inputBox">
+					<label>Orçamento inicial:</label><br>
+						<input	type="number"	name="orcamentoInicial"
+								min="0"			max="99999.99" step="0.01" required="">
+					</div>
+					<br>
+					<div class="inputBox">
+					<label>Orçamento final:</label><br>
+						<input	type="number"	name="orcamentoFinal"
+								min="0"			max="99999.99" step="0.01">
+					</div>
+					<br>
+					
+					<label>Status da missão:</label>
+						<select	name="status" class="selecao">
+							<option value="">Escolha...</option>
+							<option value="0">0 - Encerrada</option>
+							<option value="1">1 - Concluída</option>
+							<option value="2">2 - Em curso</option>
+							<option value="3">3 - Pendente</option>
+						</select>
+					
+					<br><br>
+					
+					
+					<label>Sigilo:</label>
+						<select name="sigilo" class="selecao">
+							<option value="">Escolha...</option>
+							<option value="1">1 - Pública</option>
+							<option value="2">2 - Restrita</option>
+							<option value="3">3 - Sigilosa</option>
+							<option value="4">4 - Secreta</option>
+						</select>
+					
+					<br><br>
+					</fieldset>
+		
+					<fieldset class="fieldset">
+					<legend>Descrição e Observações</legend>
+					<br><div class="inputBoxText">
+					<label>Descrição da missão:</label><br>
+						<textarea	name="descricao"	rows="3"
+									cols="80"	placeholder="Descreva a missão e seus objetivos."></textarea>
+					</div>
+					<br>
+					<div class="inputBoxText">
+					<label>Descrição da(s) pendência(s):</label><br>
+						<textarea	name="pendencia"	rows="3"
+									cols="80"	placeholder="Descreva as pendências aqui."></textarea>
+					</div>
+						<br>
+					<div class="inputBoxText">
+					<label>Observações:</label><br>
+						<textarea	name="obs"		rows="3"
+									cols="80"		placeholder="Observações."></textarea>
+					</div>
+						 <br>
+									
+					<input type="submit" value="Enviar">
+					<input type="reset" value="Limpar">			
+					</fieldset>
+				</form>		
+		</div>
+	
+	</body>
+
+
+</html>

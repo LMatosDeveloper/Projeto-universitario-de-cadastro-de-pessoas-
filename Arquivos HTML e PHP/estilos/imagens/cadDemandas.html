@@ -1,0 +1,111 @@
+<html>
+	<head>
+		<title> Cadastro de demandas </title>
+		
+		<body>
+			<form 	action="cadDemandas.php" 
+					enctype="multipart/form-data"
+					method="post"> 	 
+			<h1>Cadastro de demandas</h1>
+			Nome: <br>
+			<input type="text"
+				   name="nome"
+				   maxlength="30"
+				   size="30"> <br><br>
+			RG: <br>
+			<input type="text"
+				   name="rg"
+				   maxlength="9"
+				   placeholder="Apenas numeros"><br><br>
+				   
+			
+			
+			CPF: <br>
+			<input type="text"
+				   name="cpf"
+				   maxlength="11"
+				   placeholder="Apenas numeros"><br><br>
+				   
+				   
+			Sexo:<br>
+			<input type="radio" name="sexo" value="M" checked>Masculino
+			<input type="radio" name="sexo" value="F">Feminino<br><br>
+			
+			
+			DDD:<br>
+			<input type="text"
+				   name="ddd"
+				   maxlength="2"
+				   placeholder="Apenas numeros"><br><br>
+				   
+				   
+			Telefone:<br>
+			<input type="text"
+				   name="telefone"
+				   maxlength="9"
+				   placeholder="Apenas numeros"><br><br>
+				   
+				   
+			Nascimento:<br>
+			<input type="date"
+				   name="nascimento"><br><br>
+				   
+				   
+			Nacionalidade:<br>
+			<input type="text"
+				   name="nacionalidade"
+				   maxlength="30"
+				   size="15"> <br><br>
+			
+			UF de nascimento:<br>	
+			<input type="text"
+				   name="ufNascimento"
+				   maxlength="2"> <br><br>
+				   
+				   
+			UF atual:<br>
+			<input type="text"
+				   name="atual"
+				   maxlength="2"> <br><br>
+				   
+				   
+			Serviço:<br>
+			<select name="servico">
+				<option value="">Escolha</option>
+				<option value="R">Retirada de documento</option>
+				<option value="E">EmissÃ£o de documento</option>
+				<option value="S">Segunda via de documento</option>
+				<option value="O">Outros</option>
+		    </select><br><br>
+				   
+			Motivo da solicitação:<br>
+			<input type="text"
+				   name="motivoSolicitacao"
+				   maxlength="30"><br><br>
+				   
+				   
+			Data da solicitação:<br>
+			<input type="date"
+				   name="dataSolicitacao"><br><br>
+				   
+				   
+			Observações:<br>
+			<textarea
+				   name="obs"
+				   rows="5" 
+				   cols="100"
+				   placeholder="Observações adicionais:"></textarea><br><br>
+			
+			
+			
+			<input type="submit" value="Enviar">
+			
+			
+			
+			
+			</form>
+		
+		</body>
+	
+	<head>
+</html>
